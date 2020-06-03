@@ -205,7 +205,7 @@ var test_procedure2 = {
 
 timeline.push(test_procedure2);
 
-var raw_data = jsPsych.data.get().filter({ test_part: "test2" });
+
 
 var goodbye = {
   type: "html-keyboard-response", //that's a plugin
