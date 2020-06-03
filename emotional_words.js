@@ -182,7 +182,7 @@ var test_stimuli2 = [
     stimulus: "HEADQUARTERS",
     data: { stim_type: "neutral", correct_response: "j" },
   },
-  { stimulus: "ADVICE", data: { stim_type: "neutral", correct_response: "j" } },
+  { stimulus: "ADVICE", data: { stim_type: "neutral", correct_response: "j", name: "advice" } },
 ];
 
 var test2 = {
