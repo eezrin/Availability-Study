@@ -192,7 +192,7 @@ var test2 = {
   post_trial_gap: 700,
   data: jsPsych.timelineVariable("data"), //this line puts the data tags of the stimuli into the timeline
   on_finish: function (data) {
-    data.key_press;
+    data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
   },
 };
 
