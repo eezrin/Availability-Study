@@ -4,6 +4,8 @@
 
 <head>
   <title>My experiment</title>
+  
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
   <script src="jspsych-6.1.0/jspsych.js"></script>
   <script src="jspsych-6.1.0/plugins/jspsych-html-keyboard-response.js"></script>
   <script src="jspsych-6.1.0/plugins/jspsych-image-keyboard-response.js"></script>
@@ -17,8 +19,9 @@
   /* start the experiment */
   jsPsych.init({
     timeline: timeline,
+    display_element: "display_stage",
     on_finish: function () {
-      jsPsych.data.displayData();
+      save_data_csv();
     }
   });
 </script>

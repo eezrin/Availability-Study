@@ -1,3 +1,42 @@
+/* Change 4: Defining necessary variables for saving the results */
+// experimental session-defining variables
+var task_name = "emotional-words";
+var sbj_id = "test01";
+
+// you must put your save_data php url here.
+var save_url = "https://cunylarc.org/public_html/exp_data/save_data.php";
+var data_dir = task_name;
+
+// my preference is to include the task and sbj_id in the file name
+var file_name = task_name + "_" + sbj_id;
+
+/* Change 5: Defining save functions using jQuery */
+function save_data_json() {
+  jQuery.ajax({
+    type: "post",
+    cache: false,
+    url: save_url,
+    data: {
+      data_dir: data_dir,
+      file_name: file_name + ".json", // the file type should be added
+      exp_data: jsPsych.data.get().json(),
+    },
+  });
+}
+
+function save_data_csv() {
+  jQuery.ajax({
+    type: "post",
+    cache: false,
+    url: save_url,
+    data: {
+      data_dir: data_dir,
+      file_name: file_name + ".csv", // the file type should be added
+      exp_data: jsPsych.data.get().csv(),
+    },
+  });
+}
+
 var timeline = [];
 
 var welcome = {
@@ -182,7 +221,10 @@ var test_stimuli2 = [
     stimulus: "HEADQUARTERS",
     data: { stim_type: "neutral", correct_response: "j" },
   },
-  { stimulus: "ADVICE", data: { stim_type: "neutral", correct_response: "j", name: "advice" } },
+  {
+    stimulus: "ADVICE",
+    data: { stim_type: "neutral", correct_response: "j", name: "advice" },
+  },
 ];
 
 var test2 = {
@@ -192,7 +234,9 @@ var test2 = {
   post_trial_gap: 700,
   data: jsPsych.timelineVariable("data"), //this line puts the data tags of the stimuli into the timeline
   on_finish: function (data) {
-    data.correct = data.key_press == jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
+    data.correct =
+      data.key_press ==
+      jsPsych.pluginAPI.convertKeyCharacterToKeyCode(data.correct_response);
   },
 };
 
@@ -204,8 +248,6 @@ var test_procedure2 = {
 };
 
 timeline.push(test_procedure2);
-
-
 
 var goodbye = {
   type: "html-keyboard-response", //that's a plugin
