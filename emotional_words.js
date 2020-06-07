@@ -4,7 +4,7 @@ var task_name = "emotional-words";
 var sbj_id = "test01";
 
 // you must put your save_data php url here.
-var save_url = "https://cunylarc.org/public_html/exp_data/save_data.php";
+var save_url = "http://www.cunylarc.org/public_html/exp_data/save_data.php";
 var data_dir = task_name;
 
 // my preference is to include the task and sbj_id in the file name
