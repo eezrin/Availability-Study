@@ -40,16 +40,34 @@ function save_data_csv() {
 var timeline = [];
 
 var test_stimuli = [
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
-  { stimulus: "TESTING", data: { stim_type: "positive" } },
+{ stimulus: "DISGRACE" , data: { stim_type: "negative" } },
+{ stimulus: "FUNERAL" , data: { stim_type: "negative" } },
+{ stimulus: "BOREDOM" , data: { stim_type: "negative" } },
+{ stimulus: "DEBT" , data: { stim_type: "negative" } },
+{ stimulus: "CRASH" , data: { stim_type: "negative" } },
+{ stimulus: "HURT" , data: { stim_type: "negative" } },
+{ stimulus: "WASTE" , data: { stim_type: "negative" } },
+{ stimulus: "INJURY" , data: { stim_type: "negative" } },
+{ stimulus: "FAILURE" , data: { stim_type: "negative" } },
+{ stimulus: "FEVER" , data: { stim_type: "negative" } },
+{ stimulus: "HELL" , data: { stim_type: "negative" } },
+{ stimulus: "FAT" , data: { stim_type: "negative" } },
+{ stimulus: "THEFT" , data: { stim_type: "negative" } },
+{ stimulus: "BOOTH" , data: { stim_type: "neutral" } },
+{ stimulus: "EXCEPTION" , data: { stim_type: "neutral" } },
+{ stimulus: "SADDLE" , data: { stim_type: "neutral" } },
+{ stimulus: "SCREEN" , data: { stim_type: "neutral" } },
+{ stimulus: "LAUNDRY" , data: { stim_type: "neutral" } },
+{ stimulus: "EMPLOYEE" , data: { stim_type: "neutral" } },
+{ stimulus: "GRADE" , data: { stim_type: "neutral" } },
+{ stimulus: "CONVENTION" , data: { stim_type: "neutral" } },
+{ stimulus: "HEADQUARTERS" , data: { stim_type: "neutral" } },
+{ stimulus: "CHEST" , data: { stim_type: "neutral" } },
+{ stimulus: "CLAIM" , data: { stim_type: "neutral" } },
+{ stimulus: "PLATE" , data: { stim_type: "neutral" } },
+{ stimulus: "REPORT" , data: { stim_type: "neutral" } },
 ];
+
 
 var fixation = {
   type: "html-keyboard-response",
