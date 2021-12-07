@@ -1,6 +1,6 @@
 /* Change 4: Defining necessary variables for saving the results */
 // experimental session-defining variables
-var task_name = "emotional-words";
+var task_name = "availability-study";
 var sbj_id = "test01";
 
 // you must put your save_data php url here.
